@@ -20,8 +20,10 @@ public class Noooooo {
 		
 		Scanner sc = new Scanner(System.in);
 		
+		char n;
 		String name;
 		name = sc.next();		//공백을 기준으로 한 단어 또는 한 문자씩 입력받음
+		n = sc.next().charAt(0);
 //		name = sc.nextLine(); //줄바꿈 하기 전까지의 문장 전체를 입력받음. (\n 버리고 문자열만 리턴함)
 		System.out.println("이름 : " + name);
 		
