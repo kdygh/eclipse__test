@@ -2,6 +2,17 @@ package com.test_240710;
 
 import java.util.Scanner;
 
+class Circle
+{
+	private int radius;
+	
+	public void SetRadius(int num) {radius = num;}
+	public int GetRadius() {return radius;}
+	
+	public double GetN(double PI) {return radius * radius * PI;}
+	public double GetD(double PI) {return radius * 2 * PI;}
+}
+
 public class BufferBlahBlah {
 
 	public static final double PI = 3.141592;
@@ -12,6 +23,8 @@ public class BufferBlahBlah {
 		//System.in - 화면에서 입력을 받겠다는 의미
 		Scanner sc = new Scanner(System.in);
 		
+		Circle cs = new Circle();
+		
 		int radius = 0;
 		double n, d = 0;
 		
@@ -19,8 +32,10 @@ public class BufferBlahBlah {
 		
 		radius = sc.nextInt();
 		
-		n = radius * radius * PI;
-		d = radius * 2 * PI;
+		cs.SetRadius(radius);
+		
+		n = cs.GetN(PI);
+		d = cs.GetD(PI);
 		
 		System.out.println("넓이 : " + n);
 		System.out.println("둘레 : " + d);
