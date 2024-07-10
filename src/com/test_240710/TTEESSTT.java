@@ -74,6 +74,11 @@ public class TTEESSTT {
 		finally
 		{
 			System.out.println("finally는 예외가 나든 안 나든 출력됨");
+			
+			for(int i = 0; i < args.length; i++)
+			{
+				System.out.println(args[i]);
+			}
 		}
 	}
 
