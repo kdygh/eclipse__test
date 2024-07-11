@@ -22,6 +22,15 @@ public class test1_240711 {
 			
 			int input2;
 			System.out.println();
+			
+			if(input == 0)
+			{
+				System.out.printf("너 %d 입력함\n", input);
+			}
+			else
+			{
+				System.out.printf("너 0말고 %d 입력함\n", input);
+			}
 		}
 		catch(IOException e)
 		{
