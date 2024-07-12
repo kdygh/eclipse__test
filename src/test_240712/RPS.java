@@ -16,7 +16,7 @@ public class RPS {
 		System.out.print("미 : ");
 		String mi = br.readLine();
 		
-		String winner; 
+		String winner = null; 
 		
 		switch(jun)
 		{
@@ -75,5 +75,7 @@ public class RPS {
 		}
 			break;
 		}
+		
+		System.out.println("승자 : " + winner);
 	}
 }
