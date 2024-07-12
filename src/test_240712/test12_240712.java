@@ -17,7 +17,7 @@ public class test12_240712 {
 	
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
-
+		//github.com/hyunh31/hyunh.git
 		BufferedReader br = new BufferedReader(
 				new InputStreamReader(System.in));
 		
