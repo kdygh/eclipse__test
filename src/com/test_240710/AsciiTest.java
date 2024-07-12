@@ -5,8 +5,8 @@ import java.io.*;
 /*기본 숙지 아스키
  * 
  * '0' ~ '9' : 48 ~ 57
- * 'A' ~     : 65 ~ 90
- * 'a' ~	   : 97 ~ 122*/
+ * 'A' ~ 'Z' : 65 ~ 90
+ * 'a' ~ 'z'  : 97 ~ 122*/
 public class AsciiTest {
 
 	public static void main(String[] args) throws IOException {
