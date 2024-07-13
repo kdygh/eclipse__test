@@ -32,7 +32,7 @@ public class RPS {
 			}
 			else if(mi.equals("가위"))
 			{
-				winner = "없음";
+				winner = "비김";
 			}
 		}
 		break;
