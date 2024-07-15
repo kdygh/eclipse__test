@@ -32,6 +32,7 @@ public class test6_240715 {
 		 
 		 int cnt = 2;
 		 
+		 //???
 		while(true)
 		{
 			if(cnt > 9)
