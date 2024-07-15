@@ -7,7 +7,6 @@ import java.io.*;
 
 public class test6_240715 {
 
-	//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 //
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
