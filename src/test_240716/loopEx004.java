@@ -12,6 +12,7 @@ import java.io.*;
 
 public class loopEx004 {
 
+	//해당 달의 마지막 일자 구하기
 	public static int getDaysInMonth(int month, int year)
 	{
 		int end = 0;
@@ -46,6 +47,7 @@ public class loopEx004 {
 	     return end;
 	}
 	
+	//윤년인지 여부 구하기
     public static boolean isLeapYear(int year) {
 		 if((year % 4 == 0) && (year % 100 != 0 || year % 400 == 0)) 
 		 {
