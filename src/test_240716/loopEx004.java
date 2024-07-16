@@ -59,9 +59,7 @@ public class loopEx004 {
 		// TODO Auto-generated method stub
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		int year = 0, month = 0, start = 0, end = 0;
-		
-		boolean isLeapYear = false;
+		int year = 0, month = 0, start = 0;
 		
 		while(true)
 		{
@@ -85,13 +83,13 @@ public class loopEx004 {
 			break;
 		}
 	
-		int baseYear = 1900;
-		int baseDayOfWeek = 1;
+		int baseYear = 2006;
+		int baseDayOfWeek = 0;
 		
 		// 주어진 년도의 1월 1일부터 입력된 날짜까지의 일수를 계산
         int totalDays = 0;
         
-        // 1900년부터 입력된 연도까지의 연수를 더함
+        // 2006년부터 입력된 연도까지의 연수를 더함
         for (int i = baseYear; i < year; i++) 
         {
             totalDays += isLeapYear(i) ? 366 : 365;
@@ -112,6 +110,8 @@ public class loopEx004 {
 		 System.out.printf("---------올해는 %s입니다.--------\n", isLeapYear(year) ? "윤년" : "평년");
 		 System.out.printf("|  일  |  월  |  화  |  수  |  목  |  금  |  토  |\n");
 		 
+		 //해당 달의 시작요일까지 공백으로 넘기기 위해 만든 변수
+		 //얼마나 공백으로 넘길 지, 얼마나 넘겼는지 확인용
 		 int cnt = 1;
 		 
 		 for(int i = 0; i < start; i++)
