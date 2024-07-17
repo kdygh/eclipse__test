@@ -21,7 +21,7 @@ public class test8_240717 {
 		}
 		 
 		System.out.println("---- ------------------------");
-		System.out.printf("\t전체 학생 수 : %d\n", students.length);
+		System.out.printf("\t전체 학생 수 : %d명\n", students.length);
 		System.out.println("----------------------------");
 		System.out.println("  이름\t\t전번");
 		
