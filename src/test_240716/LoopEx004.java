@@ -10,7 +10,7 @@ import java.io.*;
  * |일 | 월 | 화 | 수 | 목 | 금 | 토 |
  * */
 
-public class loopEx004 {
+public class LoopEx004 {
 
 	//해당 달의 마지막 일자 구하기
 	public static int getDaysInMonth(int month, int year)
@@ -136,6 +136,8 @@ public class loopEx004 {
 			 
 			 cnt++;
 		 }
+		 
+
 	}
 
 }
