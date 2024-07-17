@@ -1,4 +1,4 @@
-package test_240717;
+package test__240717;
 
 import java.io.*;
 import java.util.*;

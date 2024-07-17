@@ -1,4 +1,4 @@
-package test_240717;
+package test__240717;
 
 public class test6_240717 {
 
