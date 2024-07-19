@@ -56,27 +56,30 @@ public class test11_240719 {
 		
 		
 //		4.
-		int [][] arr4 = new int[4][5];
-		
-		int num = 1;
-		int cnt = 0;
-		
-		for(int i = 0; i < arr4.length; i++)
-		{
-			int j = arr4[i].length;
-			
-			arr4[i][cnt] = num++;
-		}
-		
-		for(int i = 0; i < arr4.length; i++)
-		{
-			for(int j = 0; j < arr4[i].length; j++)
-			{
-				System.out.printf("%3d ", arr4[i][j]);
-			}
-			
-			System.out.println();
-		}
+//		int [][] arr4 = new int[4][5];
+//		
+//		int num = 1;
+//		int cnt = 0;
+//		
+//		for(int j = 0; cnt <= arr4.length; j++)
+//		{			
+//			for(int i = 0; i < arr4.length; i++)
+//			{				
+//				arr4[i][cnt] = num++;
+//			}
+//			
+//			cnt++;
+//		}
+//		
+//		for(int i = 0; i < arr4.length; i++)
+//		{
+//			for(int j = 0; j < arr4[i].length; j++)
+//			{
+//				System.out.printf("%3d ", arr4[i][j]);
+//			}
+//			
+//			System.out.println();
+//		}
 		
 //		5.
 //		int[][] arr5 = {{1, 2, 3, 4}, {5, 6, 7}, {8, 9}, {10}};
