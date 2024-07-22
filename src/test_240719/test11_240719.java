@@ -54,6 +54,10 @@ public class test11_240719 {
 //		3.
 		int [][] arr3 = new int[4][5];
 		
+		int num = 1;
+		int cnt = arr3[0].length - 1;
+		
+		
 		
 //		4.
 //		int [][] arr4 = new int[4][5];
