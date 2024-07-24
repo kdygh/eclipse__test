@@ -184,6 +184,7 @@ public class ConcertReserve
 		}
 		
 		System.out.printf("\n");
+		System.out.println("  >>>>>>>>>>  조회를 완료 하였습니다.    <<<<<<<<<<<<");
 	}
 	
 	public void viewSit(String grade)
@@ -194,7 +195,8 @@ public class ConcertReserve
 		{
 			for(int i = 0; i < sitS.length; i++)
 			{
-				System.out.printf("%s\t", sitS[i].getName());
+				System.out.printf("%s", sitS[i].getName());
+				System.out.printf(" ");
 			}
 			
 			System.out.printf("현재 %s석 상태\n", grade);
@@ -203,7 +205,8 @@ public class ConcertReserve
 		{
 			for(int i = 0; i < sitA.length; i++)
 			{
-				System.out.printf("%s\t", sitA[i].getName());
+				System.out.printf("%s", sitA[i].getName());
+				System.out.printf(" ");
 			}
 			
 			System.out.printf("현재 %s석 상태\n", grade);
@@ -212,7 +215,8 @@ public class ConcertReserve
 		{
 			for(int i = 0; i < sitB.length; i++)
 			{
-				System.out.printf("%s\t", sitB[i].getName());
+				System.out.printf("%s", sitB[i].getName());
+				System.out.printf(" ");
 			}
 			
 			System.out.printf("현재 %s석 상태\n", grade);
@@ -233,7 +237,7 @@ public class ConcertReserve
 					return false;
 			}
 						
-			sitS[resNum].setName(temp);
+			sitS[resNum - 1].setName(temp);
 		}
 		if(grade == "A")
 		{
@@ -243,7 +247,7 @@ public class ConcertReserve
 					return false;
 			}
 			
-			sitA[resNum].setName(temp);
+			sitA[resNum - 1].setName(temp);
 		}
 		if(grade == "B")
 		{
@@ -253,7 +257,7 @@ public class ConcertReserve
 					return false;
 			}
 			
-			sitB[resNum].setName(temp);
+			sitB[resNum - 1].setName(temp);
 		}
 		
 		return true;
