@@ -6,9 +6,17 @@ public class Sit
 	private String name;
 	private int num;
 	
-	public Sit() {
+	public Sit() 
+	{
 		super();
 		// TODO Auto-generated constructor stub
+	}
+	
+	public Sit(String grade, String name, int num) 
+	{
+		this.grade = grade;
+		this.name = name;
+		this.num = num;
 	}
 
 	public String getGrade() {
