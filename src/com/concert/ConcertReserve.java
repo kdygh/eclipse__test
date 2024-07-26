@@ -3,7 +3,7 @@ package com.concert;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class ConcertReserve 
+public class ConcertReserve
 {
 	private Sit[] sitS;
 	private Sit[] sitA;
