@@ -3,14 +3,17 @@ package com.concert;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class ConcertReserve
+public class ConcertReserve 
 {
 	private Sit[] sitS;
 	private Sit[] sitA;
 	private Sit[] sitB;
 	
+	private String[] nameArr;
+	
 	private Scanner sc;
 	
+	//생성자
 	public ConcertReserve() 
 	{
 		super();
@@ -19,6 +22,8 @@ public class ConcertReserve
 		sitS =  new Sit[10];
 		sitA =  new Sit[10];
 		sitB =  new Sit[10];
+		
+		nameArr = new String[30];
 		
 		for(int i = 0; i < sitS.length; i++)
 		{
@@ -38,6 +43,7 @@ public class ConcertReserve
 		sc = new Scanner(System.in);
 	}
 
+	
 	public void input(int num)
 	{
 		
@@ -80,13 +86,17 @@ public class ConcertReserve
 			System.out.printf("이름 : ");
 			String name = sc.next();
 			
-			removeSit((grade == 1) ? "S" : (grade == 2) ? "A" : "B", name);
+			if(removeSit((grade == 1) ? "S" : (grade == 2) ? "A" : "B", name) == false)
+			{
+				System.out.println("잘못된 취소예요.");
+				break;
+			}
 
 			break;
 		}
 	}
 	
-	void removeSit(String grade, String resName)
+	boolean removeSit(String grade, String resName)
 	{
 		if(grade == "S")
 		{
@@ -95,7 +105,7 @@ public class ConcertReserve
 				if(sitS[i].getName().equals(resName))
 				{
 					sitS[i].setName("---");
-					break;
+					return true;
 				}
 			}
 		}
@@ -106,7 +116,7 @@ public class ConcertReserve
 				if(sitA[i].getName().equals(resName))
 				{
 					sitA[i].setName("---");
-					break;
+					return true;
 				}
 			}
 		}
@@ -117,10 +127,12 @@ public class ConcertReserve
 				if(sitB[i].getName().equals(resName))
 				{
 					sitB[i].setName("---");
-					break;
+					return true;
 				}
 			}
 		}
+		
+		return false;
 	}
 	
 	public void reserveSit()
@@ -144,6 +156,12 @@ public class ConcertReserve
 			System.out.printf("번호 : ");
 			int resNum = sc.nextInt();
 			
+			if(resNum < 1 || resNum > 10)
+			{
+				System.out.println("입력이 잘못됐어요");
+				continue;
+			}
+			
 			if(isReserve((grade == 1) ? "S" : (grade == 2) ? "A" : "B", name, resNum) == false)
 			{
 				System.out.println("이미 예약됐어요");
@@ -162,7 +180,8 @@ public class ConcertReserve
 		
 		for(int i = 0; i < sitS.length; i++)
 		{
-			System.out.printf("%s\t", sitS[i].getName());
+			System.out.printf("%s", sitS[i].getName());
+			System.out.printf(" ");
 		}
 		
 		System.out.printf("\n");
@@ -171,7 +190,8 @@ public class ConcertReserve
 		
 		for(int i = 0; i < sitA.length; i++)
 		{
-			System.out.printf("%s\t", sitA[i].getName());
+			System.out.printf("%s", sitA[i].getName());
+			System.out.printf(" ");
 		}
 		
 		System.out.printf("\n");
@@ -180,7 +200,8 @@ public class ConcertReserve
 		
 		for(int i = 0; i < sitB.length; i++)
 		{
-			System.out.printf("%s\t", sitB[i].getName());
+			System.out.printf("%s", sitB[i].getName());
+			System.out.printf(" ");
 		}
 		
 		System.out.printf("\n");
@@ -200,6 +221,12 @@ public class ConcertReserve
 			}
 			
 			System.out.printf("현재 %s석 상태\n", grade);
+			System.out.printf("  ");
+			
+			for(int i = 0; i < sitS.length; i++)
+			{
+				System.out.printf("%4d", i + 1);
+			}
 		}
 		if(grade == "A")
 		{
@@ -210,6 +237,12 @@ public class ConcertReserve
 			}
 			
 			System.out.printf("현재 %s석 상태\n", grade);
+			System.out.printf("  ");
+			
+			for(int i = 0; i < sitA.length; i++)
+			{
+				System.out.printf("%4d", i + 1);
+			}
 		}
 		if(grade == "B")
 		{
@@ -220,6 +253,12 @@ public class ConcertReserve
 			}
 			
 			System.out.printf("현재 %s석 상태\n", grade);
+			System.out.printf("  ");
+			
+			for(int i = 0; i < sitB.length; i++)
+			{
+				System.out.printf("%4d", i + 1);
+			}
 		}
 		
 		System.out.println();
@@ -229,36 +268,29 @@ public class ConcertReserve
 	{
 		String temp = resName;
 		
-		if(grade == "S")
+		for(int i = 0; i < nameArr.length; i++)
 		{
-			for(int i = 0; i < sitS.length; i++)
+			if(nameArr[i] != null &&
+					nameArr[i].equals(resName))
 			{
-				if(sitS[i].getName().equals(resName))
-					return false;
+				return false;
 			}
-						
+		}
+		
+		if(grade == "S")
+		{			
 			sitS[resNum - 1].setName(temp);
 		}
 		if(grade == "A")
 		{
-			for(int i = 0; i < sitA.length; i++)
-			{
-				if(sitA[i].getName().equals(resName))
-					return false;
-			}
-			
 			sitA[resNum - 1].setName(temp);
 		}
 		if(grade == "B")
 		{
-			for(int i = 0; i < sitB.length; i++)
-			{
-				if(sitB[i].getName().equals(resName))
-					return false;
-			}
-			
 			sitB[resNum - 1].setName(temp);
 		}
+		
+		nameArr[resNum - 1] = resName;
 		
 		return true;
 	}

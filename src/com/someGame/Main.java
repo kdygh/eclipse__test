@@ -8,6 +8,8 @@ public class Main {
 	public static boolean Input(BufferedReader br, Map m, Player plyr, Monster mnstr, Tresure trsr) throws IOException
 	{
 		System.out.print("w : 위  s : 아래  a : 좌  d : 우  -  ");
+		System.out.printf("\nPlayerX : %d, PlayerY : %d\n", plyr.getX(), plyr.getY());
+		System.out.printf("MonsterX : %d, MonsterY : %d\n", mnstr.getX(), mnstr.getY());
 		char input = br.readLine().charAt(0);
 		
 		if(input == '0')
@@ -143,6 +145,19 @@ public class Main {
 		}
 	}
 	
+	public static boolean isPlyrinMnstrRange(Player plyr, Monster mnstr)
+	{
+		if((mnstr.getX() + 1 == plyr.getX() ||
+			mnstr.getX() - 1 == plyr.getX())&&
+			(mnstr.getY() + 1 == plyr.getY() ||
+			mnstr.getY() - 1 == plyr.getY()))
+		{
+			return true;
+		}
+		
+		return false;
+	}
+	
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		Map m = new Map();
@@ -154,13 +169,25 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		while(true)
-		{
-			if(plyr.getX() == mnstr.getX() &&
-					plyr.getY() == mnstr.getY())
+		{			
+			drawMap(m, plyr, mnstr, trsr);
+						
+			if(Input(br, m, plyr, mnstr, trsr) == false)
+			{
+				continue;
+			}
+			
+			mnstrmv(m, plyr, mnstr);
+			
+			if(isPlyrinMnstrRange(plyr, mnstr) == true)
 			{
 				System.out.println("=========끝========");
 				System.out.println("몹한테 잡혔어요");
 				System.out.println("=========끝========");
+				drawMap(m, plyr, mnstr, trsr);
+				System.out.printf("\nPlayerX : %d, PlayerY : %d\n", plyr.getX(), plyr.getY());
+				System.out.printf("MonsterX : %d, MonsterY : %d\n", mnstr.getX(), mnstr.getY());
+
 				break;
 			}
 			
@@ -172,15 +199,6 @@ public class Main {
 				System.out.println("=========끝========");
 				break;
 			}
-			
-			drawMap(m, plyr, mnstr, trsr);
-						
-			if(Input(br, m, plyr, mnstr, trsr) == false)
-			{
-				continue;
-			}
-			
-			mnstrmv(m, plyr, mnstr);
 		}
 	}
 
