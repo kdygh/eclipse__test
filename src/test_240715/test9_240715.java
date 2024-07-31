@@ -7,7 +7,7 @@ public class test9_240715 {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
-
+//fuck
 		int num = -50, cnt = 0;
 		
 		while(true)
