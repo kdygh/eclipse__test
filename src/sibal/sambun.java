@@ -10,9 +10,9 @@ public class sambun {
 		
 		char ch = sc.next().charAt(0);
 		
-		for(char i = ch; i >= (char)97; i--)
+		for(char i = ch; i >= 'a'; i--)
 		{
-			for(char j = (char)97; j <= i; j++)
+			for(char j = 'a'; j <= i; j++)
 			{
 				System.out.printf("%c", j);
 			}
