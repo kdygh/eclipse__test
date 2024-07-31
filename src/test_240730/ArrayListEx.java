@@ -10,7 +10,7 @@ public class ArrayListEx {
 	
 	public ArrayListEx()
 	{
-
+		//yuiyutre
 		//sdfsdfsß
 		//ㅅㅣ발
 		List<String> l1 = new LinkedList<>();
