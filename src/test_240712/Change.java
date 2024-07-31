@@ -3,7 +3,7 @@ package test_240712;
 import java.util.*;
 import java.io.*;
 
-public class test1_240712 {
+public class Change {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
