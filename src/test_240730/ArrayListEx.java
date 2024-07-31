@@ -11,8 +11,8 @@ public class ArrayListEx {
 	public ArrayListEx()
 	{
 
-		//sdfsdfs
-		//ㅅㅣ발 왜 안 돼
+		//sdfsdfsß
+		//ㅅㅣ발
 		List<String> l1 = new LinkedList<>();
 		List<String> l2 = new LinkedList<>();
 		
