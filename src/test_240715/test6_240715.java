@@ -3,12 +3,10 @@ package test_240715;
 import java.util.*;
 import java.io.*;
 
-/*별찍기(최소 10개), 구구단(2 ~ 9단)*/ 
+/*구구단(2 ~ 9단)*/ 
 
 public class test6_240715 {
 
-	//asdf
-	//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
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
