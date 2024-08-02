@@ -8,10 +8,12 @@ public class ilbun {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		
+		System.out.printf("첫 번째 수 : ");
 		int num1 = sc.nextInt();
+		
+		System.out.printf("두 번째 수 : ");
 		int num2 = sc.nextInt();
 		int sum = 0;
-		
 		if(num1 > num2)
 		{
 			num1 = num1 ^ num2;
@@ -24,7 +26,6 @@ public class ilbun {
 			sum += i;
 		}
 		
-		System.out.printf("%d에서 %d 사이의 합계는 %d입니다.", num1, num2, sum);
-	}
-
+		System.out.printf("%d부터 %d까지의 합 : %d", num1, num2, sum);
+}
 }

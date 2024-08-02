@@ -16,11 +16,11 @@ public class eebun {
 		
 		for(int i = 0; i < unit.length; i++)
 		{
-			int res = cash / unit[i];
-
-			if(res > 0)
+			int result = cash / unit[i];
+			
+			if(result > 0)
 			{
-				System.out.printf("%d원짜리 %d개\n", unit[i], res);
+				System.out.printf("%d원짜리 %d개\n", unit[i], result);
 				cash %= unit[i];
 			}
 		}
